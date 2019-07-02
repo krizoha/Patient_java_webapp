@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/style.css"
+          th:href="${'css/style.css'}"/>
+    <title>Medical_Record</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>PATIENTS</h1>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>FIRST NAME</th>
+                <th>LAST NAME</th>
+                <th>DATE OF BIRTH</th>
+                <th>SEX</th>
+                <th>OCCUPATION</th>
+                <th>MARITAL STATUS</th>
+                <th>DISEASE</th>
+                <TH>FAMILY HISTORY</TH>
+                <th>DATE OF LAST MEDICAL CHECK</th>
+            </tr>
+
+            <tr th:each=" onePatient : ${allPatients}">
+                <td th:text="${onePatient.id}">0</td>
+                <td th:text="${onePatient.title}">Mr.</td>
+                <td th:text="${onePatient.firstName}">James</td>
+                <td th:text="${onePatient.lastName}">Bond</td>
+                <td th:text="${onePatient.dateOfBirth}"></td>
+                <td th:text="${onePatient.sex}">Male</td>
+                <td th:text="${onePatient.occupation}">Intelligence Agent</td>
+                <td th:text="${onePatient.maritalStatus}">Single</td>
+                <td th:text="${onePatient.disease}">Fractures</td>
+                <td th:text="${onePatient.familyHistory}">-</td>
+                <td th:text="${onePatient.dateOfLastMedicalCheck}">14.5.2018</td>
+                <td> <a th:href="${onePatient.id} + '.html'">EDIT</a></td>
+                <td> <a th:href="${onePatient.id}+ '/delete'">DELETE</a></td>
+            </tr>
+
+        </table>
+
+        <a th:href="${'new.html'}" href="medicalRecord.html">New</a>
+
+    </div>
+</body>
+</html>

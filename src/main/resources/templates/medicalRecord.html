@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/style.css"
+          th:href="${'css/style.css'}"/>
+    <title>Medical_Record</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>MEDICAL RECORD</h1>
+
+        <form method="post">
+            <table>
+
+                <tr>
+                    <td>TITLE</td>
+                    <td>
+                        <input name="title" value="Mr"
+                               th:value="${one.title}"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>FIRST NAME</td>
+                    <td>
+                        <input name="first_name" value="James"
+                               th:value="${one.firstName}"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>LAST NAME</td>
+                    <td>
+                        <input name="last_name" value="Bond"
+                               th:value="${one.lastName}"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>DATE OF BIRTH</td>
+                    <td>
+                        <input name="date_of_birth" value="13.4.1968"
+                               th:value="${one.dateOfBirth}"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>SEX</td>
+                    <td>
+                        <input name="sex" value="male"
+                               th:value="${one.sex}"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>OCCUPATION</td>
+                    <td>
+                        <input name="occupation" value="Intelligence Agent"
+                               th:value="${one.occupation}"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>MARITAL STATUS</td>
+                    <td>
+                        <input name="marital_status}" value="single"
+                               th:value="${one.maritalStatus}"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>DISEASE</td>
+                    <td>
+                        <input name="disease" value="Fractures"
+                               th:value="${one.disease}"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>FAMILY HISTORY</td>
+                    <td>
+                        <input name="family_history" value="none"
+                               th:value="${one.familyHistory}"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>DATE OF LAST MEDICAL CHECK</td>
+                    <td>
+                        <input name="date_of_last_medical_check" value="14.5.2018"
+                               th:value="${one.dateOfLastMedicalCheck}"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="EDIT"/>
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+
+        <a href="databaseOfPatients.html">BACK</a>
+
+    </div>
+</body>
+</html>
